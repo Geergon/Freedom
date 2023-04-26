@@ -1,0 +1,76 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.page {
+
+   &__main {
+      background: linear-gradient(rgba(0, 0, 0, 0.78),rgba(0, 0, 0, 0.87)) , url('@img/bg.png') 50%/cover no-repeat;
+   }
+   &__benefits{
+   }
+   &__facilities{
+   }
+   &__meet {
+   }
+   &__bottom {
+      background: linear-gradient(rgba(0, 0, 0, 0.78),rgba(0, 0, 0, 0.87)) , url('@img/bottom-bg.png') 50%/cover no-repeat;
+   }
+}
+
+.membership-link {
+   display: inline-block;
+   background-color: #E11B19;
+   padding: rem(20) rem(55) rem(20) rem(20);
+   border-radius: rem(40);
+   font-weight: 700;
+   line-height: math.div(20, 16);
+   text-transform: uppercase;
+   position: relative;
+   transition: all 0.3s ease 0s;
+   &::after{
+      content: url("data:image/svg+xml,%3Csvg width='7' height='10' viewBox='0 0 7 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.9225 9.75583L6.67834 5L1.9225 0.244167L0.744171 1.4225L4.32167 5L0.744171 8.5775L1.9225 9.75583Z' fill='white'/%3E%3C/svg%3E");
+      position: absolute;
+      right: rem(26);
+   }
+   @media (any-hover: hover){
+      &:hover{
+         background-color: #dd403d;
+         transform: scale(1.03);
+      }
+   }
+}
+
+.label_big {
+   font-weight: 700;
+   @include adaptiveValue("font-size", 18, 14);
+   line-height: math.div(20, 18);
+   text-transform: uppercase;
+}
+
+.title_big {
+   font-weight: 700;
+   @include adaptiveValue("font-size", 64, 24);
+   line-height: math.div(75, 64);
+   text-transform: uppercase;
+}
+
+.text_big {
+   @include adaptiveValue("font-size", 24, 16);
+   line-height: math.div(30, 24);
+}
+.label {
+   font-weight: 700;
+   font-size: rem(16);
+   line-height: math.div(20, 16);
+   text-transform: uppercase;
+}
+
+.title {
+   font-weight: 700;
+   @include adaptiveValue("font-size", 36, 22);
+   line-height: math.div(40, 36);
+   text-transform: uppercase;
+}
+
+.text {
+   @include adaptiveValue("font-size", 18, 14);
+   line-height: math.div(25, 18);
+}

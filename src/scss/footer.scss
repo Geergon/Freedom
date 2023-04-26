@@ -1,0 +1,38 @@
+//====================================================================================================
+.footer {
+
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      @include adaptiveValue("padding-top", 41, 20);
+      @include adaptiveValue("padding-bottom", 41, 20);
+   }
+
+   &__logo {
+      overflow: hidden;
+      @media (max-width:$mobileSmall){
+         width: rem(28);
+      }
+   }
+
+   &__social {
+      display: flex;
+      gap: rem(15);
+   }
+   
+   &__social-link {
+      svg {
+         width: rem(30);
+         height: rem(30);
+         fill: #fff;
+         transition: all 0.3s ease 0s;
+         @media (any-hover: hover){
+            &:hover{
+               transform: scale(1.1);
+            }
+         }
+      }
+   }
+}
+
+//====================================================================================================
